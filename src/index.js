@@ -1,4 +1,4 @@
-import sumar from "./App";
+/*import sumar from "./App";
 
 const first = document.querySelector("#first-number");
 const second = document.querySelector("#second-number");
@@ -12,4 +12,4 @@ form.addEventListener("submit", (event) => {
   const secondNumber = Number.parseInt(second.value);
 
   div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
-});
+});*/
