@@ -3,25 +3,32 @@ describe("CalcuCadenasTest", () => {
       expect(calcularCadena('')).toEqual(0);
     });
     it("la cadena sumada deberia", () => {
-      expect(calcularCadena('1,2')).toEqual(3);
+      expect(calcularCadena('12')).toEqual(12);
     });
     it("la cadena sumada deberia", () => {
         expect(calcularCadena('1,5')).toEqual(6);
       });
-
+      it("la cadena sumada deberia", () => {
+        expect(calcularCadena('1-5')).toEqual(6);
+      });
   });
   function calcularCadena(cadem) {
-    let reusl=0;
+    let resul=0;
     if(cadem != ''){
-        var num = cadem.split(',').map(Number);
+      if(cadem.includes(',')){
+        var num = cadem.split(',' ).map(Number);
+      }
+      else{
+        var num = cadem.split('-' ).map(Number);
+      }
         //console.log(num)
         /*for (let i=0;i<=num.length; i++){
             reusl+=num[i];
             
         }*/
         var lodash = require('lodash');
-        reusl = lodash.sum(num);
-        console.log(reusl);
+        resul = lodash.sum(num);
+        console.log(resul);
         //parseInt(reusl);
         /*var arrayIn= cadem.split(',');
         //console.log(arrayIn)
@@ -32,7 +39,7 @@ describe("CalcuCadenasTest", () => {
           
         }*/
     }
-    return reusl;
+    return resul;
   }
   
   
