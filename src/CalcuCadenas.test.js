@@ -1,26 +1,30 @@
 describe("CalcuCadenasTest", () => {
     it("la cadena sumada deberia", () => {
-      expect(calcularCadena('')).toEqual(0);
+      expect(calcularCadena('','')).toEqual(0);
     });
     it("la cadena sumada deberia", () => {
-      expect(calcularCadena('12')).toEqual(12);
+      expect(calcularCadena('12',',')).toEqual(12);
     });
     it("la cadena sumada deberia", () => {
-        expect(calcularCadena('1,5')).toEqual(6);
+        expect(calcularCadena('1,5',',')).toEqual(6);
       });
       it("la cadena sumada deberia", () => {
-        expect(calcularCadena('1-5')).toEqual(6);
+        expect(calcularCadena('1-5','-')).toEqual(6);
+      });
+      it("la cadena sumada deberia", () => {
+        expect(calcularCadena('10;5',';')).toEqual(15);
       });
   });
-  function calcularCadena(cadem) {
+  function calcularCadena(cadem,delimi) {
     let resul=0;
     if(cadem != ''){
-      if(cadem.includes(',')){
+      /*if(cadem.includes(',')){
         var num = cadem.split(',' ).map(Number);
       }
       else{
         var num = cadem.split('-' ).map(Number);
-      }
+      }*/
+        var num = cadem.split(delimi).map(Number);
         //console.log(num)
         /*for (let i=0;i<=num.length; i++){
             reusl+=num[i];
