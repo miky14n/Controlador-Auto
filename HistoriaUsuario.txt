@@ -1,1 +1,20 @@
-*recibir y guardar cadena 
+1-Historia registrar direcciones
+    Como Usuario 
+    Quiero Registrar indiaciones de movimiento
+    Para Lograr mover el auto de su posicion
+    Criterios de Confirmacion:
+    *Poder que el auto registra los movimientos ingresados
+2-Historia Mostrar posicion del auto
+    Como Sistema 
+    Quiero Mostrar la posicion actual del auto
+    Para Que el usuario pueda visualizar donde se encuentra el auto
+    Criterios de Confirmacion:
+    *El Sistema tiene la capacidad de mostrar la posicion del auto al 
+    momento de efectuar algun movimiento.
+3-Historia guardar direcciones
+    Como Sistema 
+    Quiero Registrar indiaciones de movimiento
+    Para Lograr mover el auto de su posicion inicial a una nueva
+    Criterios de Confirmacion:
+    *El sistema podra hacer que el auto se mueva dentro de la matriz controlado 
+    que no se salga del limite de la matriz.
