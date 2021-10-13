@@ -1,5 +1,5 @@
-function sumar(a, b) {
-  return a + b;
+// default moverAuto;
+export function moverAuto() {
+  return "0";
 }
 
-export default sumar;

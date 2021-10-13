@@ -1,8 +1,13 @@
+import {moverAuto} from "./App"
 describe("Controlador de auto", () => {
-    it("Controlador de auto", () => {
-      expect(("0")).toEqual("0");
+    it("Test vacio", () => {
+      expect(moverAuto()).toEqual("0");
     
   });
+  it("Retorna valor por defecto", () => {
+    expect(moverAuto()).toEqual("0");
+  
+});
   
 }); 
   
