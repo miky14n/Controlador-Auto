@@ -12,7 +12,7 @@ function extractDireciones(direcciones){
 }
 function cambiarDePosicionAuto(direcciones){
   for (let x of direcciones){
-    if((posColum>-1 || posColum<tamX) && (posFil>-1 || posFil<tamY)){
+    if(posColum>-1 && posColum<tamX && posFil>-1 && posFil<tamY){
       switch(oritacion){
         case "N":
           if(x =="A"){
@@ -68,6 +68,11 @@ function cambiarDePosicionAuto(direcciones){
           break;
       }
     }
+    else{
+      posColum=0;
+      posFil=0;
+      oritacion = "E";
+    }
   }
 }
 export default function moverAuto(intrucciones) {
@@ -80,7 +85,7 @@ export default function moverAuto(intrucciones) {
     direcciones= extractDireciones(aux[1]);
     posFil=Number(posIn[0]);
     posColum=Number(posIn[1]);
-    pista[posFil][posColum]=0;
+    pista[posFil+1][posColum+1]=0;
     oritacion = posIn[2];
     cambiarDePosicionAuto(direcciones);
     pista[posFil][posColum]=1;
@@ -92,7 +97,9 @@ export default function moverAuto(intrucciones) {
       res= posFil.toString()+","+posColum.toString()+","+oritacion;
     }
   }
-  /*var foo = pista.map(function(bar){
+  /*
+  para ver la matriz descomentar esta pedazo de cod, no funcionan los test cuando se desconmentan lo de abajo
+  var foo = pista.map(function(bar){
     return '<li>'+bar+'</li>'
   })
   document.getElementById("foo").innerHTML=foo;*/

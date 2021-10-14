@@ -32,6 +32,9 @@ describe("Controlador de auto instrucciones basicas ", () => {
   it("probando segunto Refactorin", () => {
     expect(moverAuto("12N/DAIADADA")).toEqual("1,4,S");
   });
+  it("probando si se sale del limite volver al inicio ", () => {
+    expect(moverAuto("12N/DAIADADAIAA")).toEqual("0,0,E");
+  });
 
   
 
