@@ -40,4 +40,11 @@ describe("Controlador de auto instrucciones basicas ", () => {
 
 }); 
   
+describe("Controlador de auto probando nueva funcionalidad de Salto", () => {
+  it("Probando con el ingreso de nuevo comando ", () => {
+    expect(moverAuto("12N/DADS")).toEqual("3,2,S");
+  });
+  
+
+}); 
   
