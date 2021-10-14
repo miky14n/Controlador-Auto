@@ -1,14 +1,20 @@
 <html>
   <body>
-    <h1>Sumador</h1>
-    <form id="sumar-form">
-      <label for="Ingrese la cadena">First Number:</label>
-      <input type="text" id="first-number" />
+    <h1>Controlador de auto</h1>
+      <form id="Controlador-form">
+        <label for="Ingrese la cadena">Posicion inicial del auto:</label>
+        <input type="text" id="posicion-inicial" />
+        <br>
+        <label for="Ingrese la cadena">Ingrese las direcciones :</label>
+        <input type="text" id="instrucciones" />
+        <br>
+        
+        <input type="submit" value="Ejecutar" />
+        <br>
+      </form>
+    <h2>La pos final es :</h2>
+    <div id="pos-final"></div>
       
-      <input type="submit" value="Sumar" />
-    </form>
-    <div id="resultado-div"></div>
-
     <script type="module" src="./src/index.js"></script>
   </body>
 </html>

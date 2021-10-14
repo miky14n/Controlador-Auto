@@ -1,15 +1,14 @@
-/*import sumar from "./App";
-
-const first = document.querySelector("#first-number");
-const second = document.querySelector("#second-number");
-const form = document.querySelector("#sumar-form");
-const div = document.querySelector("#resultado-div");
+import moverAuto from "./App";
+const form = document.querySelector("#Controlador-form");
+const posicionInicial = document.querySelector("#posicion-inicial");
+const direcciones = document.querySelector("#instrucciones");
+const div = document.querySelector("#pos-final");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
-
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
-});*/
+  var posIni = String(posicionInicial.value);
+  var direcc = String(direcciones.value);
+  
+  div.innerHTML = "<p>" + moverAuto( String( posIni+"/"+direcc)) + "</p>";
+});
