@@ -1,4 +1,5 @@
 import moverAuto from "./App";
+import getPista from "./App";
 const form = document.querySelector("#Controlador-form");
 const posicionInicial = document.querySelector("#posicion-inicial");
 const direcciones = document.querySelector("#instrucciones");
@@ -11,4 +12,10 @@ form.addEventListener("submit", (event) => {
   var direcc = String(direcciones.value);
   
   div.innerHTML = "<p>" + moverAuto( String( posIni+"/"+direcc)) + "</p>";
+  pista = getPista();
+  var foo = pista.map(function(bar){
+    return '<li>'+bar+'</li>'
+  })
+  document.getElementById("foo").innerHTML=foo;
+
 });

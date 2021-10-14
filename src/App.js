@@ -3,6 +3,10 @@ const tamX = 5;
 const tamY = 5;
 let pista= [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]];
 const separador = "/";
+
+function extractDireciones(direcciones){
+  return direcciones.split('').join('');
+}
 export default function moverAuto(intrucciones) {
   var res = "0";
   let posIn;
@@ -10,7 +14,7 @@ export default function moverAuto(intrucciones) {
   if(intrucciones.includes("/")){
     let aux = intrucciones.split('/');
     posIn=aux[0].split('').join('');
-    direcciones= aux[1].split('').join('');
+    direcciones= extractDireciones(aux[1]);
     var posFil=Number(posIn[0]);
     var posColum=Number(posIn[1]);
     pista[posFil][posColum]=0;
@@ -75,9 +79,9 @@ export default function moverAuto(intrucciones) {
       }
     }
     pista[posFil][posColum]=1;
-    /**/
+    /*
     posFil++;
-    posColum ++;
+    posColum ++;*/
     
     if(posFil!= NaN && posColum!= NaN){
       
@@ -90,4 +94,5 @@ export default function moverAuto(intrucciones) {
   document.getElementById("foo").innerHTML=foo;*/
   return res;
 }
+
 
