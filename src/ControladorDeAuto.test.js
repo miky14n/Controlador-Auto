@@ -16,8 +16,8 @@ describe("Controlador de auto instrucciones basicas vacias", () => {
   
 }); 
 describe("Controlador de auto instrucciones basicas ", () => {
-  it("Deberia devolver parte del string separado", () => {
-    expect(moverAuto("0/0")).toEqual("0");
+  it("Deberia devolver la posicion final del auto un avance no tan complicado", () => {
+    expect(moverAuto("12N/DA")).toEqual("2,4,E");
   });
 
   
